@@ -1,0 +1,48 @@
+name: kings
+description: Samuel Kings portfolio website
+
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.16.2 <3.0.0"
+  
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.2
+  animations: ^2.0.2
+  google_fonts: ^2.3.1
+  firebase_core: ^1.14.1
+  url_launcher: ^6.0.20
+  url_strategy: ^0.2.0
+  hovering: ^1.0.4
+  carousel_slider: ^4.0.0
+  easy_image_viewer: ^1.0.4
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^1.0.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/background.jpg
+    - assets/samuel-kings.png
+    - assets/facebook.png
+    - assets/twitter.png
+    - assets/linkedin.png
+    - assets/github.png
+    - assets/desktop_screenshot.png
+    - assets/tab_screenshot.png
+    - assets/mobile_screenshot.png
+    - assets/afrihome/
+    - assets/borku/
+    - assets/bezalio/
+    - assets/petonyx/
+    - assets/rightdeal/
+    - assets/inaspace/
+    - assets/pricing_icons/

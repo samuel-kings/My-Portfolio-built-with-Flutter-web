@@ -1,0 +1,15 @@
+{
+  "hosting": {
+    "site": "samuelkings",
+    "public": "build/web",
+    "rewrites": [ {
+      "source": "**/!(*.css|*.js|*.map|*.jpg|*.gif|*.png|*.php)",
+      "destination": "/index.html"
+    } ],
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}

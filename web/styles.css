@@ -1,0 +1,47 @@
+body {
+	font:18px/1.2em 'Josefin Slab', Calibri, serif;
+	padding: 0;
+	font-weight: 501;
+	margin: 0;
+	background-color: #121316;
+	box-sizing: border-box;
+}
+/**loader**/
+.loader {
+	height: 50px;
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	animation: rotate 3s linear infinite;
+}
+@keyframes rotate {
+	to {
+		transform: rotate(deg);
+	}
+}
+.circle {
+	display: inline;
+	background-color: #222532;
+	height: 60px;
+	margin-right: 5px;
+	width: 10px;
+	animation: grow 1.5s linear infinite;
+	transform: scale(0.3);
+	
+}
+.circle:nth-child(2){
+	display: inline;
+	background-color: white;
+	animation-delay: 0.7s;
+}
+.circle:nth-child(4){
+	display: inline;
+	background-color: white;
+	animation-delay: 0.7s;
+}
+@keyframes grow {
+	50% {
+		transform: scale(1);
+	}
+}
