@@ -19,7 +19,7 @@ final routes = RouteMap(
       return buildPage(name: notFound, child: NotFoundPage(name: route));
     },
     routes: {
-      homeScreenRoute: (route) => buildPage(name: 'Home', child: const HomeScreen()),
+      homeScreenRoute: (route) => buildPage(name: 'Samuel Kings - My Portfolio', child: const HomeScreen()),
       aboutScreenRoute: (route) => buildPage(name: 'About', child: const AboutMeScreen()),
       projectsScreenRoute: (route) => buildPage(name: 'Projects', child: const ProjectsScreen()),
       pricingScreenRoute: (route) => buildPage(name: 'Pricing', child: const PricingScreen()),

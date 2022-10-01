@@ -92,7 +92,8 @@ class _HomeScreenState extends State<HomeScreen> {
 * Website Developer
 * Mobile App Developer (Android, iOS)
 * Desktop App Developer (Windows, Linux, MacOS)
-* Software Engineer''',
+* Software Engineer
+* SEO Expert''',
                         style: TextStyle(
                           fontSize: _isMobile ? 14 : 24,
                           color: Colors.white,

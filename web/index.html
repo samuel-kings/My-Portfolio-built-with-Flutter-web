@@ -6,17 +6,20 @@
 
   <meta charset="UTF-8">
   <meta content="IE=Edge" http-equiv="X-UA-Compatible">
-  <meta name="description" content="This is a portfolio website for Samuel Kings built with flutter web">
+  <meta name="description" content="Samuel Kings - My portfolio | Web developer, App Developer, Desktop App Developer">
+  <meta name="keywords" content="Samuel Kings, Kings Samuel">
+  <meta name="author" content="Samuel Kings">
 
   <!-- iOS meta tags & icons -->
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <meta name="apple-mobile-web-app-title" content="kings">
   <link rel="apple-touch-icon" href="icons/Icon-192.png">
+  <meta property="og:image" content=”https://pbs.twimg.com/profile_images/1511481386426851328/U3CfO_Nv_400x400.jpg” />
 
   <!-- Favicon -->
-<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
-<link rel="icon" type="image/png" href="favicon.png"/>
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" href="favicon.png" />
 
   <title>Samuel Kings - My portfolio Website</title>
   <link rel="manifest" href="manifest.json">
@@ -35,16 +38,16 @@
 <body id="app-container">
   <!-- loader -->
   <div class="loader">
-		<div class="circle"></div>
+    <div class="circle"></div>
 
-		<div class="circle"></div>
+    <div class="circle"></div>
 
-		<div class="circle"></div>
+    <div class="circle"></div>
 
-		<div class="circle"></div>
+    <div class="circle"></div>
 
-		<div class="circle"></div>
-	</div>
+    <div class="circle"></div>
+  </div>
 
   <!-- firebase script -->
   <script type="module">
@@ -53,7 +56,7 @@
     import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.6.7/firebase-analytics.js";
     // TODO: Add SDKs for Firebase products that you want to use
     // https://firebase.google.com/docs/web/setup#available-libraries
-  
+
     // Your web app's Firebase configuration
     // For Firebase JS SDK v7.20.0 and later, measurementId is optional
     const firebaseConfig = {
@@ -65,12 +68,12 @@
       appId: "1:916645220692:web:206300f3990c31ae92f8c1",
       measurementId: "G-0KYDY54ZV6"
     };
-  
+
     // Initialize Firebase
     const app = initializeApp(firebaseConfig);
     const analytics = getAnalytics(app);
   </script>
-  
+
   <!-- dafault script from flutter web -->
   <script>
     var serviceWorkerVersion = null;
@@ -138,4 +141,5 @@
   </script>
 
 </body>
+
 </html>
