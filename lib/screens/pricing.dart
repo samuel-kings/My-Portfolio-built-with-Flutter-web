@@ -4,8 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:kings/utils/color.dart';
 import 'package:kings/utils/extensions.dart';
-import '../routing/consts.dart';
 import '../utils/nav_menu.dart';
+import '../utils/router.dart';
 
 class PricingScreen extends StatefulWidget {
   const PricingScreen({Key? key}) : super(key: key);

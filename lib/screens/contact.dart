@@ -2,9 +2,9 @@ import 'package:animations/animations.dart';
 import 'package:flutter/material.dart';
 import 'package:hovering/hovering.dart';
 import 'package:url_launcher/url_launcher.dart';
-import '../routing/consts.dart';
 import '../utils/color.dart';
 import '../utils/nav_menu.dart';
+import '../utils/router.dart';
 
 class ContactScreen extends StatefulWidget {
   const ContactScreen({Key? key}) : super(key: key);

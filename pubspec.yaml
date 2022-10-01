@@ -20,6 +20,7 @@ dependencies:
   hovering: ^1.0.4
   carousel_slider: ^4.0.0
   easy_image_viewer: ^1.0.4
+  routemaster: ^1.0.1
 
 dev_dependencies:
   flutter_test:
@@ -46,3 +47,6 @@ flutter:
     - assets/rightdeal/
     - assets/inaspace/
     - assets/pricing_icons/
+    - assets/football_vidz/
+    - assets/gibson_school/
+    - assets/fwoo_demo_store/

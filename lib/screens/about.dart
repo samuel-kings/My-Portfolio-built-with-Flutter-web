@@ -5,8 +5,8 @@ import 'package:flutter/material.dart';
 import 'package:kings/utils/color.dart';
 import 'package:kings/utils/extensions.dart';
 import 'package:url_launcher/url_launcher.dart';
-import '../routing/consts.dart';
 import '../utils/nav_menu.dart';
+import '../utils/router.dart';
 
 class AboutMeScreen extends StatefulWidget {
   const AboutMeScreen({Key? key}) : super(key: key);

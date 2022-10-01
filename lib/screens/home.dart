@@ -2,10 +2,10 @@
 import 'package:animations/animations.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:kings/routing/consts.dart';
 import 'package:kings/utils/color.dart';
 import 'package:kings/utils/nav_menu.dart';
 import 'package:url_launcher/url_launcher.dart';
+import '../utils/router.dart';
 import '/utils/extensions.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -18,8 +18,7 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
-    bool _isTab = MediaQuery.of(context).size.width < 810 &&
-        MediaQuery.of(context).size.width > 420;
+    bool _isTab = MediaQuery.of(context).size.width < 810 && MediaQuery.of(context).size.width > 420;
     bool _isMobile = MediaQuery.of(context).size.width < 600;
     bool _isDesktop = MediaQuery.of(context).size.width > 810;
 
@@ -44,7 +43,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 child: Column(
                   children: [
                     OpenContainer(
-                      transitionDuration: const Duration(seconds: 1),
+                        transitionDuration: const Duration(seconds: 1),
                         closedElevation: 0,
                         closedColor: Colors.transparent,
                         openColor: Colors.black,
@@ -57,30 +56,28 @@ class _HomeScreenState extends State<HomeScreen> {
                                 onTap: () {
                                   action();
                                 },
-                                child: Icon(Icons.menu,
-                                    color: Colors.white,
-                                    size: _isMobile ? 35 : 40)),
+                                child: Icon(Icons.menu, color: Colors.white, size: _isMobile ? 35 : 40)),
                           );
                         },
                         openBuilder: (context, action) {
-                          return NavMenu(action: action, routeName: homeScreenRoute,); }),
+                          return NavMenu(
+                            action: action,
+                            routeName: homeScreenRoute,
+                          );
+                        }),
                     Container(
-                      margin: EdgeInsets.only(top: 40, left: _isMobile ? 5 :15),
+                      margin: EdgeInsets.only(top: 40, left: _isMobile ? 5 : 15),
                       alignment: Alignment.centerLeft,
                       child: RichText(
                         text: TextSpan(
-                          text: 'Samuel ',
+                          text: 'Samuel',
                           style: GoogleFonts.kurale(
-                              fontSize: _isMobile ? 30 : 80,
-                              color: Colors.white,
-                              fontWeight: FontWeight.w500),
+                              fontSize: _isMobile ? 30 : 80, color: Colors.white, fontWeight: FontWeight.w500),
                           children: [
                             TextSpan(
-                              text: 'Kings',
+                              text: ' Kings',
                               style: GoogleFonts.kurale(
-                                  fontSize: _isMobile ? 30 : 80,
-                                  color: yellowColor,
-                                  fontWeight: FontWeight.w500),
+                                  fontSize: _isMobile ? 30 : 80, color: yellowColor, fontWeight: FontWeight.w500),
                             ),
                           ],
                         ),
@@ -88,14 +85,13 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                     Container(
                       color: Colors.black.withOpacity(0.2),
-                      padding:
-                          const EdgeInsets.only(top: 10, left: 15, bottom: 10),
+                      padding: const EdgeInsets.only(top: 10, left: 15, bottom: 10),
                       alignment: Alignment.centerLeft,
                       child: Text(
                         '''
-* Web Developer
-* Mobile Developer (Android, iOS)
-* Desktop Developer (Windows, Linux, MacOS)
+* Website Developer
+* Mobile App Developer (Android, iOS)
+* Desktop App Developer (Windows, Linux, MacOS)
 * Software Engineer''',
                         style: TextStyle(
                           fontSize: _isMobile ? 14 : 24,
@@ -109,8 +105,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         top: 10,
                       ),
                       color: Colors.black.withOpacity(0.2),
-                      padding:
-                          const EdgeInsets.only(top: 10, left: 15, bottom: 10),
+                      padding: const EdgeInsets.only(top: 10, left: 15, bottom: 10),
                       alignment: Alignment.centerLeft,
                       child: Column(
                         children: [
@@ -127,7 +122,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           Align(
                             alignment: Alignment.centerLeft,
                             child: Text(
-                              'Wordpress | HTML | CSS | JavaScript | Flutter | Python',
+                              'Flutter | Wordpress | HTML | CSS | JavaScript | React | Python',
                               style: TextStyle(
                                 fontSize: _isMobile ? 18 : 24,
                                 color: Colors.white,
@@ -145,14 +140,11 @@ class _HomeScreenState extends State<HomeScreen> {
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
-                          _imageIconButton('assets/facebook.png',
-                              'https://web.facebook.com/SamuelKings.tech'),
-                          _imageIconButton('assets/twitter.png',
-                              'https://twitter.com/apstkingssamuel'),
-                          _imageIconButton('assets/linkedin.png',
-                              'https://www.linkedin.com/in/samuel-kings-3a46971b0/'),
+                          _imageIconButton('assets/facebook.png', 'https://web.facebook.com/SamuelKings.tech'),
+                          _imageIconButton('assets/twitter.png', 'https://twitter.com/apstkingssamuel'),
                           _imageIconButton(
-                              'assets/github.png', 'https://github.com/Kings-Samuel'),
+                              'assets/linkedin.png', 'https://www.linkedin.com/in/samuel-kings-3a46971b0/'),
+                          _imageIconButton('assets/github.png', 'https://github.com/Kings-Samuel'),
                         ],
                       ),
                     )
@@ -177,5 +169,4 @@ class _HomeScreenState extends State<HomeScreen> {
           margin: const EdgeInsets.only(right: 13)),
     ).showCursorOnHover.moveUpOnHover;
   }
-
 }

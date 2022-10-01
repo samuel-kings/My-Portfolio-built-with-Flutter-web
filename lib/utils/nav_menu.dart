@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:hovering/hovering.dart';
-import 'package:kings/routing/consts.dart';
 import 'package:kings/utils/color.dart';
+import 'package:kings/utils/router.dart';
+import 'package:routemaster/routemaster.dart';
 
 class NavMenu extends StatefulWidget {
   const NavMenu({Key? key, required this.action, required this.routeName})
@@ -107,7 +108,7 @@ class _NavMenuState extends State<NavMenu> {
         firstChild: TextButton(
           onPressed: (() {
             widget.action();
-            Navigator.pushNamed(context, _route);
+            Routemaster.of(context).push(_route);
           }),
           child: Text(_name.toUpperCase(),
               style: TextStyle(
@@ -119,7 +120,7 @@ class _NavMenuState extends State<NavMenu> {
         secondChild: TextButton(
           onPressed: (() {
             widget.action();
-            Navigator.pushNamed(context, _route);
+            Routemaster.of(context).push(_route);
           }),
           child: Text(_name.toUpperCase(),
               style: TextStyle(

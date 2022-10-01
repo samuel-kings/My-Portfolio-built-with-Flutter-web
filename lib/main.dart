@@ -1,10 +1,9 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:kings/routing/consts.dart';
+import 'package:routemaster/routemaster.dart';
 import 'package:url_strategy/url_strategy.dart';
-import 'routing/router.dart' as router;
-
+import 'utils/router.dart';
 
 Future main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -30,26 +29,26 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
   @override
-  Widget build(BuildContext context) => MaterialApp(
+  Widget build(BuildContext context) {
+    return MaterialApp.router(
       debugShowCheckedModeBanner: false,
       title: 'Samuel Kings',
-      onGenerateRoute: router.generateRoute,
-      initialRoute: homeScreenRoute,
+      routerDelegate: RoutemasterDelegate(routesBuilder: (context) => routes),
+      routeInformationParser: const RoutemasterParser(),
       theme: ThemeData(
           scrollbarTheme: ScrollbarThemeData(
               thickness: MaterialStateProperty.all(5),
               radius: const Radius.circular(10),
               thumbColor: MaterialStateProperty.all(Colors.black),
               trackColor: MaterialStateProperty.all(Colors.white),
-              showTrackOnHover: true),
+              trackVisibility: MaterialStateProperty.all(true)),
           primaryColor: const Color(0xFF000000),
           textTheme: GoogleFonts.kuraleTextTheme(
             Theme.of(context).textTheme,
           ),
-          colorScheme: ColorScheme.fromSwatch()
-              .copyWith(secondary: const Color(0xFF000000)),
+          colorScheme: ColorScheme.fromSwatch().copyWith(secondary: const Color(0xFF000000)),
           // ignore: deprecated_member_use
           accentColor: const Color(0xFF000000)),
-      
-  );
+    );
+  }
 }
